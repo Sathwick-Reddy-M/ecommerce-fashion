@@ -14,6 +14,8 @@ import {
 import { selectIsCartOpen } from "../../store/cart/cart.selector";
 import { signOutStart } from "../../store/user/user.action";
 
+
+
 function Navigation() {
   const dispatch = useDispatch();
   const currentUser = useSelector(selectCurrentUser);
@@ -27,10 +29,11 @@ function Navigation() {
         </LogoContainer>
 
         <NavLinks>
+
           <NavLink to="/shop">SHOP</NavLink>
 
           {currentUser ? (
-            <NavLink as="span" onClick={signOutUser}>
+            <NavLink as="span" to="/" onClick={signOutUser}>
               SIGN OUT
             </NavLink>
           ) : (
