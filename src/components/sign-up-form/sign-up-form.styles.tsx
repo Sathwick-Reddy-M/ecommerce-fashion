@@ -7,8 +7,8 @@ export const SignUpContainer = styled.div`
 
   h2 {
     margin: 10px 0;
-    font-size: 2rem; /* Larger font size for headers */
+    font-size: 2rem;
     text-transform: uppercase;
-    letter-spacing: 1px; /* Letter spacing for a modern feel */
+    letter-spacing: 1px;
   }
 `;

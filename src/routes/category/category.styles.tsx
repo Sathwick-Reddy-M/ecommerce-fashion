@@ -5,10 +5,10 @@ export const CategoryContainer = styled.div`
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
   row-gap: 50px;
-  padding: 50px; /* Add padding for some space around the items */
-  background-color: #c3bfbf; /* Dark background for the grid */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
-  margin-top: 30px; /* Ensure some space above the grid container */
+  padding: 50px;
+  background-color: #c3bfbf;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
   color: white;
 
   img {
@@ -30,9 +30,9 @@ export const Title = styled.h2`
   font-size: 38px;
   margin-bottom: 25px;
   text-align: center;
-  color: black; /* White color for the title for high contrast */
-  text-transform: uppercase; /* Modern styling with uppercase */
-  letter-spacing: 2px; /* More letter spacing for a luxury look */
-  margin-top: 0; /* Remove top margin if not necessary */
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 0;
 `;
 

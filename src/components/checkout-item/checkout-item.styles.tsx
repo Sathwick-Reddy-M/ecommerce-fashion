@@ -4,14 +4,14 @@ export const CheckoutItemContainer = styled.div`
 width: 100%;
 display: flex;
 min-height: 100px;
-border-bottom: 1px solid #eaeaea; // Soften the border color
+border-bottom: 1px solid #eaeaea;
 padding: 20px 0;
-font-size: 18px; // Slightly reduce the font size for a more refined look
+font-size: 18px;
 align-items: center;
 transition: background-color 0.2s ease-in-out;
 
 &:hover {
-  background-color: #f9f9f9; // Gentle highlight on hover
+  background-color: #f9f9f9;
 }
 `;
 
@@ -21,8 +21,8 @@ padding-right: 15px;
 img {
   width: 100%;
   height: 100%;
-  object-fit: cover; // Ensure the image covers the area
-  border-radius: 10px; // Modern rounded corners
+  object-fit: cover;
+  border-radius: 10px;
 }
 `;
 
@@ -41,7 +41,7 @@ export const Quantity = styled(BaseSpan)`
   transition: transform 0.2s ease;
 
   &:hover {
-    transform: scale(1.2); // Slight scale effect on hover
+    transform: scale(1.2);
   }
 }
 
@@ -61,10 +61,10 @@ margin: 0 10px;
 export const RemoveButton = styled.div`
 padding-left: 12px;
 cursor: pointer;
-color: #ff6b6b; // Use a color that suggests removal action
+color: #ff6b6b;
 transition: color 0.2s ease;
 
 &:hover {
-  color: #ff3b3b; // A more intense color on hover for interactivity
+  color: #ff3b3b;
 }
 `;
