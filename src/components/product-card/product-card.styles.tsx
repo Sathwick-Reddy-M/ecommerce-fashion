@@ -13,11 +13,12 @@ export const ProductCartContainer = styled.div`
     height: 95%;
     object-fit: cover;
     margin-bottom: 5px;
+    opacity: 0.9;
   }
 
   button {
     width: 80%;
-    opacity: 0.7;
+    opacity: 0.9;
     position: absolute;
     top: 255px;
     display: none;
@@ -25,11 +26,11 @@ export const ProductCartContainer = styled.div`
 
   &:hover {
     img {
-      opacity: 0.8;
+      opacity: 1;
     }
 
     button {
-      opacity: 0.85;
+      opacity: 1;
       display: flex;
     }
   }

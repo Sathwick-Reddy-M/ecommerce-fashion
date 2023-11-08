@@ -13,14 +13,16 @@ import {
 } from "./navigation.styles";
 import { selectIsCartOpen } from "../../store/cart/cart.selector";
 import { signOutStart } from "../../store/user/user.action";
-
-
+import { clearAllItemsFromCart } from "../../store/cart/cart.action";
 
 function Navigation() {
   const dispatch = useDispatch();
   const currentUser = useSelector(selectCurrentUser);
   const isCartOpen = useSelector(selectIsCartOpen);
-  const signOutUser = () => dispatch(signOutStart());
+  const signOutUser = () => {
+    dispatch(signOutStart())
+    dispatch(clearAllItemsFromCart());
+  };
   return (
     <Fragment>
       <NavigationContainer>

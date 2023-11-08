@@ -9,6 +9,8 @@ import {
   PaymentFormContainer,
   PaymentButton,
 } from "./payment-form.styles";
+import { clearAllItemsFromCart } from "../../store/cart/cart.action";
+import { useDispatch } from "react-redux";
 
 function PaymentForm() {
   const stripe = useStripe();
@@ -16,6 +18,7 @@ function PaymentForm() {
   const amount = useSelector(selectCartTotal);
   const currentUser = useSelector(selectCurrentUser);
   const [isProcessingPayment, setIsProcessingPayment] = useState(false);
+  const dispatch = useDispatch();
 
   const paymentHandler = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -49,7 +52,8 @@ function PaymentForm() {
       alert(paymentResult.error);
     } else {
       if (paymentResult.paymentIntent.status === "succeeded") {
-        alert("Payment Successful");
+        dispatch(clearAllItemsFromCart());
+        alert("Order Placed Successfully.")
       }
     }
   };
