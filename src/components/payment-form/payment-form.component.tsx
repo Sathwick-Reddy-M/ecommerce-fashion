@@ -57,7 +57,7 @@ function PaymentForm() {
   return (
     <PaymentFormContainer>
       <FormContainer onSubmit={paymentHandler}>
-        <h2>Credit Card Payment: </h2>
+        <h2>Payment </h2>
         <CardElement />
         <PaymentButton
           isLoading={isProcessingPayment}

@@ -1,13 +1,14 @@
 import { Outlet } from "react-router-dom";
 
 import Directory from "../../components/directory/directory.component";
+import { BodyContainer } from "./home.styles";
 
 function Home() {
   return (
-    <div>
+    <BodyContainer>
       <Directory></Directory>
       <Outlet></Outlet>
-    </div>
+    </BodyContainer>
   );
 }
 

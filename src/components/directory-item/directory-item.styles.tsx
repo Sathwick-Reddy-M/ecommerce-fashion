@@ -10,63 +10,70 @@ export const BackgroundImage = styled.div<BackgroundImageProps>`
   background-size: cover;
   background-position: center;
   background-image: ${({ imageurl }) => `url(${imageurl})`};
+  transition: transform 0.5s ease-in-out, filter 0.5s ease;
+  filter: grayscale(50%) contrast(1);
+  &:hover {
+    filter: grayscale(0%) contrast(1.2);
+    transform: scale(1.05);
+  }
 `;
 
 export const Body = styled.div`
-  height: 90px;
-  padding: 0 25px;
+  height: 110px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
-  background-color: white;
-  opacity: 0.7;
   position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(6, 6, 6, 0.85) 100%);
+  color: #ffffff;
+  transition: background 0.5s ease;
 
   h2 {
-    font-weight: bold;
-    margin: 0 6px 0;
-    font-size: 22px;
-    color: #4a4a4a;
+    font-weight: 700;
+    margin: 0;
+    font-size: 26px;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
     text-transform: uppercase;
+    transition: text-shadow 0.5s ease;
   }
 
   p {
-    font-weight: lighter;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 5px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    transition: text-shadow 0.5s ease;
+  }
+
+  &:hover {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(10, 10, 10, 0.95) 100%);
   }
 `;
 
 export const DirectoryItemContainer = styled.div`
-  min-width: 30%;
-  height: 240px;
-  flex: 1 1 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid black;
-  margin: 0 7.5px 15px;
+  position: relative;
+  height: 340px;
+  border-radius: 12px;
   overflow: hidden;
-
-  &:first-child {
-    margin-right: 7.5px;
-  }
-
-  &:last-child {
-    margin-left: 7.5px;
-  }
+  transition: box-shadow 0.5s ease-in-out;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 
   &:hover {
-    cursor: pointer;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
 
-    ${BackgroundImage} {
-      transform: scale(1.1);
-      transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    ${BackgroundImage}, ${Body} {
+      transition: all 0.5s ease-in-out;
     }
 
     ${Body} {
-      opacity: 0.9;
+      h2, p {
+        text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+      }
     }
   }
 `;

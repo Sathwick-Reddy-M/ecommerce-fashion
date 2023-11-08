@@ -26,10 +26,6 @@ function Navigation() {
       <NavigationContainer>
         <LogoContainer to="/">
           <Logo className="logo"></Logo>
-        </LogoContainer>
-
-        <NavLinks>
-
           <NavLink to="/shop">SHOP</NavLink>
 
           {currentUser ? (
@@ -39,6 +35,9 @@ function Navigation() {
           ) : (
             <NavLink to="/auth">SIGN IN</NavLink>
           )}
+        </LogoContainer>
+
+        <NavLinks>
           <CartIcon />
         </NavLinks>
         {isCartOpen && <CartDropdown />}
