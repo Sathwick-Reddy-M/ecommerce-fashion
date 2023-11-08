@@ -52,6 +52,7 @@ export const Body = styled.div`
 
   &:hover {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(10, 10, 10, 0.95) 100%);
+    cursor: pointer;
   }
 `;
 

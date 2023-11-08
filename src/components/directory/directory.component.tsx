@@ -15,34 +15,40 @@ export type DirectoryCategory = {
 const categories = [
   {
     id: 1,
-    title: "hats",
-    imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
-    route: "shop/hats",
+    title: "hoodies",
+    imageUrl: "https://images.pexels.com/photos/724499/pexels-photo-724499.jpeg?auto=compress&cs=tinysrgb&w=760&h=250&dpr=2",
+    route: "shop/hoodies",
   },
   {
     id: 2,
-    title: "jackets",
-    imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
-    route: "shop/jackets",
+    title: "sunglasses",
+    imageUrl: "https://images.pexels.com/photos/701877/pexels-photo-701877.jpeg?auto=compress&cs=tinysrgb&w=760&h=250&dpr=2",
+    route: "shop/sunglasses",
   },
   {
     id: 3,
-    title: "sneakers",
-    imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
-    route: "shop/sneakers",
+    title: "shoes",
+    imageUrl: "https://images.pexels.com/photos/2529157/pexels-photo-2529157.jpeg?auto=compress&cs=tinysrgb&w=760&h=250&dpr=2",
+    route: "shop/shoes",
   },
   {
     id: 4,
-    title: "womens",
-    imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
-    route: "shop/womens",
+    title: "suits",
+    imageUrl: "https://images.pexels.com/photos/325876/pexels-photo-325876.jpeg?auto=compress&cs=tinysrgb&w=760&h=250&dpr=2",
+    route: "shop/suits",
   },
   {
     id: 5,
-    title: "mens",
-    imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
-    route: "shop/mens",
+    title: "hats",
+    imageUrl: "https://images.pexels.com/photos/984619/pexels-photo-984619.jpeg?auto=compress&cs=tinysrgb&w=760&h=250&dpr=2",
+    route: "shop/hats",
   },
+  {
+    id: 6,
+    title: "sweaters",
+    imageUrl: "https://images.pexels.com/photos/3626313/pexels-photo-3626313.jpeg?auto=compress&cs=tinysrgb&w=760&h=250&dpr=2",
+    route: "shop/sweaters"
+  }
 ];
 
 const Directory = () => {
