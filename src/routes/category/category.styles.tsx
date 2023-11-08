@@ -6,10 +6,8 @@ export const CategoryContainer = styled.div`
   column-gap: 20px;
   row-gap: 50px;
   padding: 50px;
-  background-color: #c3bfbf;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   margin-top: 30px;
-  color: white;
 
   img {
     width: 100%;
@@ -30,7 +28,6 @@ export const Title = styled.h2`
   font-size: 38px;
   margin-bottom: 25px;
   text-align: center;
-  color: black;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-top: 0;

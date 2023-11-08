@@ -6,6 +6,7 @@ import {
 import { setIsCartOpen } from "../../store/cart/cart.action";
 import { ReactComponent as ShoppingIcon } from "../../assets/shopping-bag.svg";
 import { CartIconContainer, ItemCount } from "./cart-icon.styles";
+import { useEffect, useRef } from "react";
 
 function CartIcon() {
   const dispatch = useDispatch();
@@ -19,8 +20,24 @@ function CartIcon() {
     0
   );
 
+  const cartIconRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const handleClickOutside: EventListenerOrEventListenerObject = (event) => {
+      if (cartIconRef.current && !cartIconRef.current.contains(event.target as Node)) {
+        dispatch(setIsCartOpen(false));
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <CartIconContainer onClick={toggleIsCartOpen}>
+    <CartIconContainer onClick={toggleIsCartOpen} ref={cartIconRef}>
       <ShoppingIcon className="shopping-icon"></ShoppingIcon>
       <ItemCount>{totalQuantity}</ItemCount>
     </CartIconContainer>

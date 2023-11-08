@@ -5,17 +5,16 @@ export const CategoryPreviewContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
-  background-color: #1e1e1e;
+  
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 `;
 
 export const Title = styled(Link)`
   font-size: 28px;
   margin-bottom: 25px;
   cursor: pointer;
-  color: #f0f0f0;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: color 0.3s ease;
@@ -34,7 +33,7 @@ export const Preview = styled.div`
 
   > * {
     border-radius: 8px;
-    overflow: hidden;
+    // overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {

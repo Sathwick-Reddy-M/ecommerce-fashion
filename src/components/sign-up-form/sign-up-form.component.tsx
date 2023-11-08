@@ -45,7 +45,7 @@ function SignUpForm() {
 
   return (
     <SignUpContainer>
-      <h2>Don't have an account?</h2>
+      <h2>Create a new account</h2>
       <span>Sign up with your email and password</span>
       <form onSubmit={handleSubmit}>
         <FormInput

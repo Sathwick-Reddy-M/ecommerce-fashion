@@ -26,7 +26,7 @@ function Navigation() {
       <NavigationContainer>
         <LogoContainer to="/">
           <Logo className="logo"></Logo>
-          <NavLink to="/shop">SHOP</NavLink>
+          <NavLink to="/shop">Products</NavLink>
 
           {currentUser ? (
             <NavLink as="span" to="/" onClick={signOutUser}>
