@@ -1,70 +1,77 @@
-# Getting Started with Create React App
+# E-Commerce Fashion App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the E-Commerce Fashion App! This React application provides a user-friendly environment for online shopping. Users can effortlessly create accounts, manage items in their cart, and securely complete payments. For a hands-on experience, check out the deployed version [here](https://sathwick-ecommerce-fashion-app.netlify.app/).
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+1. Clone the repository
 
-### `npm start`
+```
+git clone https://github.com/Sathwick-Reddy-M/ecommerce-fashion.git
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Navigate to the project directory
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+cd ecommerce-fashion
+```
 
-### `npm test`
+3. Install dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm install
+```
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The shopping application has the following major features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### User Registration
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Firebase is employed to handle user authentication, ensuring a secure and reliable authentication process.
+2. The application provides user-friendly sign-up options, allowing users to create accounts using their email and password, while also incorporating the convenience of Google Sign-in for a seamless registration experience.
+3. Firebase authentication is employed through the steps of signing in and signing up, ensuring a secure and efficient process.
 
-### `npm run eject`
+### Shopping
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. The Firestore Database is where all the different categories and the items that are currently up for sale are stored.
+2. A convenient cart system is available to help users effortlessly keep track of the items they want to buy.
+3. `Redux-Persist` is utilised to persist the data in the cart and user authentication states.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Payment
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. The payments are facilitated using the Stripe API.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Asynchronous Functions
 
-## Learn More
+1. Redux Thunk and Redux Saga are utilised to manage the asynchronous functions in the application
+2. One of these include the retrieval of the different categories and items which are on sale from the firestore database when the Shop component mounts.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Context API & Redux
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. At the start, the Context API is employed to update the states. Subsequently, Redux techniques are introduced to effectively manage the complex interactions and updates of categories and cart items based on user actions.
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Netlify is used to deploy the React application.
+2. The Netlify function is utilized to activate Stripe payments, and you can find it in the `netlify/functions` directory.
 
-### `npm run build` fails to minify
+## Technologies & Concepts Utilised
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+React, TypeScript, React Context API, React Router, Redux, Redux-Persist, Redux Thunk, Redux Saga, Firebase, Netlify
+
+## Project Structure
+
+- `netlify/functions`: This directory holds the payment intent function responsible for enabling Stripe payments.
+
+- `components`: Here, you'll find the React components that make up the shopping application.
+
+- `routes`: Similarly, this directory contains React components but specifically for different endpoints within the application.
+
+- `store`: Houses the Redux actions and state management files, ensuring organized and efficient data handling.
+
+- `utils/firebase`: Contains helpful functions for data retrieval from the Firestore database and user authentication.
+
+- `utils/reducer`: This directory holds useful functions related to Redux reducers, aiding in state management.
+
+- `utils/stripe`: Here, you can access helpful functions for the initial setup required to enable Stripe payments.
